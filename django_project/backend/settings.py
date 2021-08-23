@@ -99,7 +99,7 @@ DATABASES = {
        'NAME': 'postgres',
        'USER': 'admin',
        'PASSWORD': 'Shawndb2021!',
-       'HOST': 'hdm.tnz.mybluehost.me',
+       'HOST': 'server.shawnnovel.com',
        'PORT': '5432',
    }
 }
