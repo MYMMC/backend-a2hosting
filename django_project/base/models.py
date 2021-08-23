@@ -1,6 +1,5 @@
 from django.db import models
-from django.db.models.signals import pre_delete
-from django.dispatch.dispatcher import receiver
+# from django.contrib.postgres.fields import ArrayField
 
 # Create your models here.
 
@@ -76,19 +75,3 @@ class People(models.Model):
     
     def __str__(self) -> str:
         return self.name
-        
-@receiver(pre_delete, sender=Service)
-    def service_delete(sender, instance, **kwargs):
-        instance.file.delete(False)
-        
-@receiver(pre_delete, sender=News)
-    def news_delete(sender, instance, **kwargs):
-        instance.file.delete(False)
-        
-@receiver(pre_delete, sender=Client)
-    def mymodel_delete(sender, instance, **kwargs):
-        instance.file.delete(False)
-        
-@receiver(pre_delete, sender=People)
-    def people_delete(sender, instance, **kwargs):
-        instance.file.delete(False)
