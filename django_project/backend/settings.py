@@ -34,6 +34,8 @@ ALLOWED_HOSTS = [
     "hdm.tnz.mybluehost.me",
     "django",
     "162.240.12.156",
+    "server.shawnnovel.com",
+    "190.92.148.231",
     "admin.shawnnovel.com",
     ""
 ]
