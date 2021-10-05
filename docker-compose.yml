@@ -8,6 +8,7 @@ services:
       - .env
     build:
       context: .
+    restart: unless-stopped  
     ports:
       - "8000:8000"
   nginx:
@@ -15,7 +16,8 @@ services:
     volumes:
       - static-data:/vol/static
       - ./www-certs:/etc/letsencrypt
-    env_file: .env  
+    env_file: .env
+    restart: unless-stopped
     ports:
       - "80:80"
       - "443:443"
